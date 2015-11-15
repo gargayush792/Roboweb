@@ -1,0 +1,358 @@
+/////////////////
+// Semantic.gs // for LESS: http://lesscss.org/
+/////////////////
+
+// Defaults which you can freely override
+
+@column-width: 60;
+@gutter-width: 20;
+@columns: 12;
+
+// Utility variable — you should never need to modify this
+@gridsystem-width: (@column-width*@columns) + (@gutter-width*@columns) * 1px;
+
+// Set @total-width to 100% for a fluid layout
+@total-width: 98.04%;
+
+// Uncomment these two lines and the star-hack width/margin lines below to enable sub-pixel fix for IE6 & 7. See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+ //@min-width: 1140;
+ //@correction: 0.5 / @min-width * 100 * 1%;
+
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix() {
+	*zoom:1;
+	
+	&:before,
+	&:after {
+	    content:"";
+	    display:table;
+	}
+	&:after {
+	    clear:both;
+	}
+}
+
+
+//////////
+// GRID //
+//////////
+
+body {
+	//background-image: url("../images/bg.jpg");
+	background-repeat: repeat;
+font-family:Calibri;
+    //font-family:"Helvetica";
+	.clearfix;
+//background-color:#BABABA;
+
+//background-image: url("../images/bg3.png"); background-color: white; background-position: initial initial; background-repeat: initial initial; 
+	
+}
+
+.row(@columns:@columns) {
+	display: block;
+	width: @total-width*((@gutter-width + @gridsystem-width)/@gridsystem-width);
+	margin: 0 @total-width*(((@gutter-width*.5)/@gridsystem-width)*-1);
+	// *width: @total-width*((@gutter-width + @gridsystem-width)/@gridsystem-width)-@correction;
+	// *margin: 0 @total-width*(((@gutter-width*.5)/@gridsystem-width)*-1)-@correction;
+	.clearfix;
+}
+.column(@x,@columns:@columns) {
+	display: inline;
+	float: left;
+	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+	margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width);
+	// *width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width)-@correction;
+	// *margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width)-@correction;
+}
+.push(@offset:1) {
+	margin-left: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+.pull(@offset:1) {
+	margin-right: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+div.center {
+	width: 90%;
+	margin: 0 auto;
+	
+	
+}
+#innerWrapper{
+	.row(12);
+	margin: 0 auto;
+	//border: 3px solid #A0A9AF;
+	-webkit-box-shadow: 0px 0px 4px 1px #837878;
+	-moz-box-shadow: 0px 0px 4px 1px #837878;
+	-o-box-shadow: 0px 0px 4px 1px #837878;
+	-ms-box-shadow: 0px 0px 4px 1px #837878;
+	box-shadow: 0px 0px 4px 1px #837878;
+	background: white;
+	//color: #667279;
+
+	font-size: 16px;
+}
+#___plus_0{
+margin:0 25px;
+}
+h2,h1,h3,h4,h5,h6 {text-transform:capitalize;
+color: black}
+span{color:black;}
+#header {
+	.row(12);
+	margin: 0;
+	#Logospace{
+		box-shadow: 0px -1px 1px 
+rgba(0, 0, 0, 0.22);
+//position: relative;
+//top: -5px;
+	}
+	
+}
+.title{
+      text-align: center; //Dynamic page title printing region
+      font-family: "myriad pro";
+   }
+#content {
+	.row(12);
+	margin: 0;
+	color:black;
+//position: relative;
+//top: -23px;
+//background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(
+//rgba(191, 255, 255, 0.19)), to(
+//rgba(230, 241, 245, 0.82)));
+//background-image: url("../images/bg1.png"); background-color: white; background-position: initial initial; background-repeat: initial initial; 
+background-image: url("../images/bg.png"); background-color: white; background-position: initial initial; background-repeat: initial initial; 
+
+	.download a{
+		background-image: url('../images/download.png');
+		display: block;
+		width: 150px;
+		height: 55px;
+		background-repeat: no-repeat;
+		margin: 0 auto;
+	}
+  .content {
+     margin: 15px;
+
+	}
+}
+
+workshops{
+   .column(3);
+   background-color:  black;
+   ul{
+	list-style: none;
+	
+   }
+   ul li{
+	display: list-item;
+   }
+}
+pictures{
+	
+	
+	.column(9);
+	
+}
+ul.sdt_menu{
+	
+	padding:0;
+	list-style: none;
+	font-family:"Myriad Pro", "Trebuchet MS", sans-serif;
+	font-size:14px;
+	margin: 0 auto;
+	width:1100px;
+}
+ul.sdt_menu a{
+	text-decoration:none;
+	outline:none;
+}
+ul.sdt_menu li{
+	
+	float:left;
+	width:157px;
+	height:75px;
+	position:relative;
+	cursor:pointer;
+}
+ul.sdt_menu li > a{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:157px;
+	height:75px;
+	z-index:12;
+	border-right: thin solid rgba(83, 16, 16, 0.07);
+	//-moz-box-shadow:0px 0px 2px #000 inset;
+	//-webkit-box-shadow:0px 0px 2px #000 inset;
+	//box-shadow:0px 0px 2px #000 inset;
+}
+ul.sdt_menu li a img{
+	border:none;
+	position:absolute;
+	width:0px;
+	height:0px;
+	bottom:0px;
+	left:85px;
+	z-index:100;
+	-moz-box-shadow:0px 0px 4px #000;
+	-webkit-box-shadow:0px 0px 4px #000;
+	box-shadow:0px 0px 4px #000;
+}
+ul.sdt_menu li span.sdt_wrap{
+	position:absolute;
+	top:25px;
+	left:0px;
+	width:157px;
+	height:60px;
+	z-index:15;
+}
+ul.sdt_menu li span.sdt_active{
+	position:absolute;
+	background:#111;
+	top:75px;
+	width:157px;
+	height:0px;
+	left:0px;
+	z-index:14;
+	-moz-box-shadow:0px 0px 4px #000 inset;
+	-webkit-box-shadow:0px 0px 4px #000 inset;
+	box-shadow:0px 0px 4px #000 inset;
+}
+ul.sdt_menu li span span.sdt_link,
+ul.sdt_menu li span span.sdt_descr,
+ul.sdt_menu li div.sdt_box a{
+	margin-left:15px;
+	text-transform:capitalize;
+	//text-shadow:1px 1px 1px #000;
+}
+ul.sdt_menu li span span.sdt_link{
+	text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.71);
+	color: #F3E4E4;
+	width:100%;
+	text-align:center;
+	margin:0;
+	font-size:20px;
+	float:left;
+	clear:both;
+}
+ul.sdt_menu li span span.sdt_descr{
+	text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.71);
+	color: #F3E4E4;
+	float:left;
+	clear:both;
+	width:100%;
+	text-align:center;
+	margin:0;
+	font-size:10px;
+	letter-spacing:1px;
+}
+ul.sdt_menu li div.sdt_box{
+	display:block;
+	position:absolute;
+	width:157px;
+	overflow:hidden;
+	height:230px;
+	top:75px;
+	left:0px;
+	display:none;
+	background:#000;
+}
+ul.sdt_menu li div.sdt_box a{
+	float:left;
+	clear:both;
+	line-height:30px;
+	color:#0B75AF;
+}
+ul.sdt_menu li div.sdt_box a:first-child{
+	margin-top:15px;
+}
+ul.sdt_menu li div.sdt_box a:hover{
+	color:#fff;
+}
+#mainmenu{
+        /*height: 80px;*/
+        position: relative;
+	.row(12);
+	z-index: 1000;
+	margin:0;
+	background:url(../images/overlay.png) repeat-x ;
+
+}
+/*
+.navmain {
+	position:relative;
+	background-color:#121b1f;
+	height:50px;
+	.row(12);
+	z-index: 3;
+	margin:0;
+	background:url("../images/navbg.png") repeat-x;
+	
+	
+}
+#navmain-wrap {
+    height: 34px;
+	margin:0;
+	padding:0;
+}
+
+#navmain-wrap li, #navmain-wrap a {
+    height: 50px;
+	width: 120px;
+    display: block;
+	text-decoration:none;
+	text-align:center;
+	margin-top:12px;
+	font-size:1.1em;
+	font-weight:bold;
+	color:white;
+}
+
+#navmain-wrap li {
+    float: left;
+    list-style: none;
+    display: inline;
+	margin:0 3px;
+}
+div#right span{
+		z-index: -1;
+top: 19px;
+position: relative;
+left: 17px;
+width: 50px;
+height: 84px;
+		background: url("../images/menuright.png");
+		float: right;
+	}
+	div#left span{
+		z-index: -1;
+top: 19px;
+position: relative;
+left: -17px;
+width: 59px;
+height: 84px;
+background: url("../images/menuleft.png");
+float: left;
+	}
+	div#left{
+		left: -30px;
+top: 50px;
+position: relative;
+height: 50px;
+width: 40px;
+background:url("../images/navbg.png") repeat-x;
+	}
+	div#right{
+		float: right;
+left: 32px;
+top: -50px;
+position: relative;
+height: 50px;
+width: 40px;
+background:url("../images/navbg.png") repeat-x;
+	}
+	*/
+
+

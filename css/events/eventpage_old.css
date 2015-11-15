@@ -1,0 +1,9 @@
+
+<style>
+    .clicked{
+        /*display: block;*/
+    }
+    .notclicked{
+        display: none;
+    }
+</style>

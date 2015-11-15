@@ -1,0 +1,281 @@
+body
+{
+    font-family: calibri;
+	font-weight: lighter;
+	font-size: 103%;
+	margin: 0;
+	padding: 0;
+}
+#wrap
+{
+	display: block;
+	width: 1170px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.banner
+{
+	position: relative;
+	display: block;
+	width: 100%;
+	min-height: 255px;
+	background-color: rgba(50,50,50,1);
+}
+.banner > #wrap
+{
+	width: 920px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.banner > div > div > h1
+{
+	color: white;
+	font-family: Copperplate / Copperplate Gothic Light, sans-serif;
+	line-height: 220px;
+	font-weight: lighter;
+	font-size: 100px;
+}
+div#topic-name
+{
+	position: relative;
+	display: block;
+	background-image: url('../Images/background.jpg');
+	background-size: 100%;
+	background-position: 50% 15%;
+	height: 250px;
+}
+div#topic-name > h2
+{
+	margin-top: 0px;
+	padding-top: 120px;
+	padding-left: 100px;
+	font-size: 60px;
+	font-weight: lighter;
+	color: white;
+}
+
+div.top
+{
+	position: relative;
+	height: 670px;
+	overflow: hidden;
+	background-image: url('../Images/header.png');
+	background-size: 100%;
+	background-position: 50% 50%;
+}
+div.top > div
+{
+	margin-top: 150px;
+}
+#wheremachinesdare
+{
+	font-weight: bold;
+	font-size: 72px;
+	line-height: 70px;
+	color: transparent;
+	text-shadow:0px 0px 8px white;
+}
+div.notice
+{
+	box-shadow: 2px 2px 20px 0px grey inset, -2px -2px 20px 0px grey inset;
+	position: relative;
+	height: 300px;
+	overflow: hidden;
+	border: 1px solid grey;
+	background-color: rgba(170,170,170,0.6);
+	border-radius: 8px;
+}
+div.notice > div > p
+{
+	color: black;
+	margin-left: 5px;
+	padding-right: 5px;
+	font-size: 18px;
+}
+div.notice > div
+{
+	position: absolute;
+	width: 100%;
+	min-height: 500px;
+	text-align: center;
+	margin-bottom: 8px;
+	top: 300px;
+	font-weight: lighter;
+	animation-name: slide;
+	animation-duration:25s;
+	animation-timing-function:linear;
+	animation-delay:0s;
+	animation-iteration-count: infinite;
+	animation-direction:normal;
+	animation-play-state:running;
+	/* Safari and Chrome: */
+	-webkit-animation-name: slide;
+	-webkit-animation-duration:25s;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-delay:0s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction:normal;
+	-webkit-animation-play-state: running;
+	-webkit-perspective:100;
+}
+div.notice:hover > div
+{
+	animation-play-state: paused;
+	-webkit-animation-play-state:paused;
+}
+/*Animation*/
+@keyframes slide
+{
+	0%
+	{
+		transform: translateY(0px);
+	}
+	99.99%
+	{
+		transform: translateY(-800px);
+	}
+	100%
+	{
+		transform: translateY(0px);
+	}
+}
+@-webkit-keyframes slide
+{
+	0%
+	{
+		-webkit-transform: translateY(0px);
+	}
+	99.99%
+	{
+		-webkit-transform: translateY(-600px);
+	}
+	100%
+	{
+		-webkit-transform: translateY(0px);
+	}
+}
+
+
+
+div.intro
+{
+	position: relative;
+	width: 100%;
+	margin-top: 30px;
+	margin-left: 0;
+	margin-bottom:30px;
+	min-height: 200px;
+}
+div.intro > div#wrap
+{
+}
+div.intro > div#wrap >div
+{
+	margin-left: 10px;
+	min-height: 200px;
+	display: block;
+}
+div.intro >div#wrap> div > h1
+{
+	font-weight: lighter;
+	color: rgba(50,50,50,1);
+	font-size: 72px;
+	line-height: 72px;
+}
+div.intro >div#wrap> div > p
+{
+	margin-top: 10px;
+	color: rgba(50,50,50,1);
+	font-weight: lighter;
+	font-size: 24;
+	line-height: 25px;
+	font-weight: lighter;
+}
+
+
+.apple
+{
+	display: inline-block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 8px;
+	height: 250px;
+	overflow: hidden;
+	border: 1px solid grey;
+	box-shadow: none;
+	background-image: -webkit-linear-gradient(top, rgba(200,200,200,1), #FFF); 
+	background-image:    -moz-linear-gradient(top, rgba(200,200,200,1), #FFF); 
+	background-image:     -ms-linear-gradient(top, rgba(200,200,200,1), #FFF); 
+	background-image:      -o-linear-gradient(top, rgba(200,200,200,1), #FFF); 
+	background-image:         linear-gradient(top, rgba(200,200,200,1), #FFF);
+	transition: all 0.5s ease-in 0s;
+	-webkit-transition: all 0.5s ease-in 0s;
+}
+.apple > p,.apple > a > h2,.apple img
+{
+	transition: all 0.5s ease-in 0s;
+	-webkit-transition: all 0.5s ease-in 0s;
+}
+.apple img
+{
+	opacity: 1;
+	margin-top: 10px;
+	height: 180px;
+}
+.apple > a
+{
+	text-decoration: none;
+}
+.apple > a > h2
+{
+	color: black;
+	font-size: 25px;
+	line-height: 22px;
+	margin-top: 13px;
+}
+.apple > p
+{
+	opacity: 1;
+	text-align: center;
+	font-size: 16px;
+	line-height: 20px;
+	opacity: 0;
+	color: black;
+	margin-top: 0px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.apple:hover > p,.apple:hover > a,.apple:hover > a > h2,.apple:hover img
+{
+	transform: translateY(-190px);
+	-webkit-transform: translateY(-190px);
+}
+.apple:hover > p
+{
+	opacity: 1;
+}
+.apple:hover > img
+{
+	opacity: 0;
+}
+.apple:hover > a
+{
+	text-decoration: underline;
+	color: black;
+}
+.apple > a:hover
+{
+	text-shadow: 0px 0px 3px black;
+}
+.apple:hover
+{
+	box-shadow: 0px 0px 20px 0px grey inset, 0px 0px 0px 0px grey inset;
+}/*
+.group-3 > .apple,.group-1 > .apple
+{
+	margin-left:17%;
+}
+.group-2
+{
+	margin-left: 9%;
+}*/

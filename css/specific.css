@@ -1,0 +1,93 @@
+body
+{
+	font-family: Trebuchet MS;
+	font-weight: lighter;
+	font-size: 103%;
+	margin: 0;
+	padding: 0;
+}
+#wrapper
+{
+	width: 90%;
+	margin: 0 auto;
+	min-height:60px;
+}
+
+
+
+
+div#sub-header
+{
+	position: relative;
+	top: 90px;
+	border: 1px solid black;
+	height: 350px;
+	background-image: url('../Images/background.jpg');
+	background-position: 50% 20%;
+	background-size: 100%;
+}
+div#sub-header > #wrapper
+{
+	margin-top: 50px;
+}
+div#sub-header > #wrapper > h2
+{
+	font-family: ;
+	font-weight: lighter;
+	color: white;
+	font-size: 65px;
+}
+
+
+.list1
+{
+	display: block; 
+	padding-top: 20px;
+}
+.list1 a
+{
+	text-decoration: none;
+	color: rgba(50,50,50,0.7);
+	display: inline-block;
+	min-width: 120px;
+	transition:all 0.4s;
+}
+.list1 a:hover
+{
+	background-color:  rgba(200,200,200,0.6);
+	color: rgba(50,50,50,0.8);
+	font-size: 110%;
+	font-weight: bold;
+}
+.list1 a.active
+{
+	background-color:  rgba(200,200,200,0.6);
+	color: rgba(50,50,50,0.8);
+	font-size: 110%;
+}
+.list1 li
+{
+	display: inline-block;
+	text-align: center;
+	min-width: 120px;
+	background-color: transparent;
+	border-bottom: 1px solid white;
+	border-left: 1px solid rgba(200,200,200,0.6);
+	border-right: 1px solid rgba(200,200,200,0.6);
+	border-top: 1px solid rgba(200,200,200,0.6);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.tab-content
+{
+	height: 80%;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	margin-top: -11px;
+	overflow: scroll;
+	border: 1px solid rgba(200,200,200,0.6);
+}
+
+
+

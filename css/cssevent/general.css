@@ -1,0 +1,236 @@
+body
+{
+	font-family: calibri;
+	font-weight: lighter;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+}
+#wrapper
+{
+	width: 1170px;
+	margin: 0 auto;
+	min-height:60px;
+}
+
+
+div#topic-name
+{
+	position: relative;
+	display: block;
+	background-image: url('../Images/background.jpg');
+	background-size: 100%;
+	background-position: 50% 15%;
+	height: 250px;
+}
+div#topic-name > h2
+{
+	margin-top: 0px;
+	padding-top: 120px;
+	padding-left: 100px;
+	font-size: 60px;
+	font-weight: lighter;
+	color: white;
+}
+
+
+p
+{
+	color: white;
+}
+.nav
+{
+	float: right;
+	display: block;
+	margin-top: 120px;
+	right: -30px;
+	position: fixed;
+	z-index: 11;
+}
+.nav li
+{
+	text-align: center;
+	margin-bottom: 10px;
+	border-radius: 6px;
+	background-color: rgba(50,50,50,0.8);
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+}
+.nav li:hover
+{
+	transform: translateX(-20px);
+	-webkit-transform: translateX(-20px);
+}
+.nav li a
+{
+	color: rgba(200,200,200,1);
+	text-decoration: none;
+	margin-left: 12px;
+	margin-right: 40px;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+}
+.nav li a:hover
+{
+	color: white;
+	text-shadow: 0px 0px 7px white;
+	text-decoration: underline;
+	background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+div.event
+{
+	min-height: 670px;
+	margin-top: -40px;
+	width: 100%;
+}
+#inspiralon
+{
+	background: url('../Images/inspiralon.jpg') no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+	background-color: grey;
+	color: white;
+	margin: 0;
+	padding: 0;
+	min-height: 670px;
+}
+#canyonrush
+{
+	background: url('../Images/canyon-rush.jpg') 50% 0 no-repeat fixed;
+	background-size: 100%;
+	background-color: grey;
+	color: white;
+	bottom: 100px;
+	margin: 0;
+	padding: 0;
+	min-height: 670px;
+}
+#tremors
+{
+	background: url('../Images/quake.jpg') 50% 0 no-repeat fixed;
+	background-size: 100%;
+	background-color: grey;
+	color: white;
+	margin: 0;
+	padding: 0;
+	min-height: 670px;
+}
+#transporter
+{
+	background: url('../Images/transporter.jpg') 50% 0 no-repeat fixed;
+	background-size: 100%;
+	background-color: grey;
+	color: white;
+	margin: 0;
+	padding: 0;
+	min-height: 670px;
+}
+#geoaware
+{
+	background: url('../Images/geo-aware.jpeg') 50% 0 no-repeat fixed;
+	background-size: 100%;
+	background-color: grey;
+	color: white;
+	margin: 0;
+	padding: 0;
+	min-height: 600px;
+}
+#coding
+{
+	background: url('../Images/coding.jpg') 50% 0 no-repeat fixed;
+	background-size: 100%;
+	background-color: grey;
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+ul.content
+{
+	/*margin-top: -40px;*/
+}
+ul.content > li > div
+{
+	min-height: 670px;
+	margin-bottom: 0px;
+}
+ul.content > li > div > div
+{
+	margin-top: 100px;
+	border-radius: 7px;
+	text-align: center;
+	min-height: 270px;
+	margin-bottom: 100px;
+}
+ul.content > li > div div > img
+{
+	min-width: 200px;
+	height: 150px;
+	transition: all 1s linear 0s;
+	-webkit-transition: all 1s linear 0s;
+}
+ul.content > li > div  div > img
+{
+	transform:rotateX(360deg);
+	-webkit-transform:rotateX(360deg);
+}
+ul.content > li > div > div > p
+{
+	top: 0;
+	left: 0;
+	color: black;
+	position: relative;
+	display: block;
+}
+.content a
+{
+	color: rgba(50,50,50,1);
+}
+.content a:hover
+{
+	color: black;
+	text-shadow: 0px 0px 3px rgba(50,50,50,1);
+}
+.content > li > div > div
+{
+	margin-top: 130px;
+	border-radius: 7px;
+	/*box-shadow: 3px 3px 10px 0px rgba(40,40,40,0.4) inset, -3px -3px 10px 0px rgba(40,40,40,0.4) inset;*/
+	/*color: white;*/
+	/*background-color: rgba(80,80,80,0.6);*/
+	color: black;
+	background-color: rgba(255,255,255,0.70);
+	box-shadow: 3px 3px 20px 0px rgba(40,40,40,0.4) inset, -3px -3px 20px 0px rgba(40,40,40,0.4) inset;
+}
+#inspiralon > div,#tremors > div,#geoaware > div
+{
+	float: right;
+	margin-right: 110px;
+}
+.content p
+{
+	font-size: 100%;
+	text-align: justify;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+strong
+{
+	font-size: 110%;
+	text-align: center;
+}
+.content
+{
+	list-style: none;
+	margin-top: 40px;
+	margin-left: 0;
+}

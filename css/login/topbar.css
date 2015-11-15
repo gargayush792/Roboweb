@@ -1,0 +1,45 @@
+/* Styles for the top fixed bar */
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#topbar {
+	height: 30px;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	background: rgba(0,0,0,0.8);
+	-moz-box-shadow:    0 2px 8px 4px black;
+  	-webkit-box-shadow: 0 2px 8px 4px black;
+ 	box-shadow:         0 2px 8px 4px black;
+}
+
+#topbar-left {
+	float:left;
+	padding: 6px 8px;	
+	color:white;
+}
+
+#topbar-left li{
+	margin: 0 0;
+	display:inline;
+	list-style-type: none;
+}
+
+#topbar-left img{
+	height: 16px;
+	width: 16px;
+}
+
+#topbar-right{
+	float:right;
+	padding: 6px 8px;	
+	color:white;
+}
+
+

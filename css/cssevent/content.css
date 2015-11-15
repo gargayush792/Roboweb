@@ -1,0 +1,243 @@
+body
+{
+	font-family: calibri;
+	font-weight: lighter;
+	font-size: 103%;
+	margin: 0;
+	padding: 0;
+}
+#wrapper
+{
+	width: 80%;
+	margin: 0 auto;
+	min-height:60px;
+}
+#wallpaper
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	min-height: 80px;
+}
+#wallpaper > img
+{
+	width: 100%;
+}
+
+div#header
+{
+	margin-top: -40;
+	position: relative;
+	min-height: 640px;
+	background-image: url('../Images/header.jpeg');
+	background-position: 50% 50%;
+	background-size: 1400px;
+	z-index: -1;
+}
+div.notice
+{
+	position: relative;
+	height: 300px;
+	overflow: hidden;
+	border: 1px solid grey;
+	background-color: rgba(170,170,170,0.6);
+	border-radius: 8px;
+}
+div.notice > div
+{
+	position: absolute;
+	width: 100%;
+	min-height: 800px;
+	text-align: center;
+	margin-bottom: 8px;
+	top: 300px;
+	animation-name: slide;
+	animation-duration:20s;
+	animation-timing-function:linear;
+	animation-delay:0s;
+	animation-iteration-count: infinite;
+	animation-direction:normal;
+	animation-play-state:running;
+	/* Safari and Chrome: */
+	-webkit-animation-name: slide;
+	-webkit-animation-duration:20s;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-delay:0s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction:normal;
+	-webkit-animation-play-state:running;
+	-webkit-perspective:100;
+}
+div.notice > div:hover
+{
+	animation-play-state: paused;
+	-webkit-animation-play-state:paused;
+}
+/*Animation*/
+@keyframes slide
+{
+	0%
+	{
+		transform: translateY(400px);
+	}
+	99.99%
+	{
+		transform: translateY(-900px);
+	}
+	100%
+	{
+		transform: translateY(400px);
+	}
+}
+@-webkit-keyframes slide
+{
+	0%
+	{
+		-webkit-transform: translateY(0px);
+	}
+	99.99%
+	{
+		-webkit-transform: translateY(-800px);
+	}
+	100%
+	{
+		-webkit-transform: translateY(0px);
+	}
+}
+div#header > div > div
+{
+	margin-top: 180px;
+}
+div#header > div > div > p.information
+{
+	font-weight: normal;
+	font-size: 18px;
+	text-align: center;
+	display : block;
+	background-color: rgba(100,100,100,0.4);
+	min-height: 250px;
+	padding-top: 10px;
+	border-radius: 15px;
+	padding-left: 7px;
+	padding-right: 7px;
+	padding-bottom: 10px;
+	box-shadow: 0px 0px 10px 0px rgba(30,30,30,1) inset;
+}
+#wheremachinesdare
+{
+	font-family: calibri;
+	margin-right: 0px;
+	font-size: 69px;
+	font-weight: bold;
+	line-height: 70px;
+	color: rgba(0,0,0,0);
+	text-shadow: 0px 0px 9px white;
+	text-align: right;
+}
+
+div#intro
+{
+	margin-top: 30px;
+	margin-left: 0;
+	margin-bottom: 30px;
+	min-height: 100px;
+}
+div#intro > div
+{
+	margin-left: 10;
+	min-height: 200px;
+	display: block;
+}
+div#intro > div > h1
+{
+	font-weight: lighter;
+	color: rgba(50,50,50,1);
+	font-size: 72px;
+	line-height: 72px;
+}
+div#intro > div > p
+{
+	margin-top: 10px;
+	color: rgba(50,50,50,1);
+	font-weight: lighter;
+	font-size: 24;
+	line-height: 25px;
+	font-weight: lighter;
+}
+
+
+
+
+
+.apple
+{
+	display: inline-block;
+	margin-left: 90px;
+	margin-bottom: 10px;
+	border-radius: 8px;
+	height: 250;	
+	overflow: hidden;
+	border: 1px solid grey;
+	box-shadow: none;
+	background-image: -webkit-linear-gradient(top, rgba(200,200,200,1), #FFF); 
+	background-image:    -moz-linear-gradient(top, rgba(200,200,200,1), #FFF); 
+	background-image:     -ms-linear-gradient(top, rgba(200,200,200,1), #FFF); 
+	background-image:      -o-linear-gradient(top, rgba(200,200,200,1), #FFF); 
+	background-image:         linear-gradient(top, rgba(200,200,200,1), #FFF);
+	transition: all 0.6s ease-in 0s;
+	-webkit-transition: all 0.6s ease-in 0s;
+}
+.apple > p,.apple > a > h2,.apple > img
+{
+	transition: all 0.6s ease-in 0s;
+	-webkit-transition: all 0.6s ease-in 0s;
+}
+.apple > img
+{
+	opacity: 1;
+	margin-top: 10px;
+	height: 180px;
+}
+.apple > a
+{
+	text-decoration: none;
+}
+.apple > a > h2
+{
+	color: black;
+	margin-top: 20px;
+}
+.apple > p
+{
+	opacity: 1;
+	width: 240px;
+	font-size: 16px;
+	line-height: 20px;
+	opacity: 0;
+	color: black;
+	margin-top: 0px;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+.apple:hover > p,.apple:hover > a,.apple:hover > a > h2,.apple:hover > img
+{
+	transform: translateY(-190px);
+	-webkit-transform: translateY(-190px);
+}
+.apple:hover > p
+{
+	opacity: 1;
+}
+.apple:hover > img
+{
+	opacity: 0;
+}
+.apple:hover
+{
+	box-shadow: 0px 0px 20px 0px grey inset, 0px 0px 0px 0px grey inset;
+}
+.group-3 > .apple,.group-1 > .apple
+{
+	margin-left: 210px;
+}
+

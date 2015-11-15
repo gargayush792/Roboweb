@@ -1,0 +1,10 @@
+RewriteEngine on
+Redirect /canyonrush /events/event/canyonrush
+Redirect /inspiralon /events/event/inspiralon
+Redirect /geoaware /events/event/geoaware
+Redirect /transporter /events/event/transporter
+Redirect /tremors /events/event/tremors
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php?$1 [L]
